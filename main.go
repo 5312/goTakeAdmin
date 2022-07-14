@@ -2,21 +2,25 @@ package main
 
 import (
 	"fmt"
+	"os/exec"
 	"project/serve/config"
 	"project/serve/datasource"
 	"project/serve/router"
+	"runtime"
 
 	"github.com/kataras/iris/v12"
 	"github.com/spf13/viper"
 )
 
 func main() {
-
-	webIris()
-
 	fmt.Println("|---------------------------|")
 	fmt.Println("|----------admin------------|")
 	fmt.Println("|---------------------------|")
+
+	webIris()
+
+	// open("http://localhost:9000/")
+
 }
 
 // iris 框架
@@ -42,4 +46,19 @@ func webIris() {
 	port := viper.Get("Conf.Port")
 	res := fmt.Sprintf("%s%s", str, port)
 	app.Run(iris.Addr(res))
+
+}
+
+func open(uri string) error {
+	// 打开浏览器
+	var commands = map[string]string{
+		"windows": "start",
+		"linux":   "xdg-open",
+	}
+	run, ok := commands[runtime.GOOS]
+	if !ok {
+		return fmt.Errorf("%q 平台识别失败", runtime.GOOS)
+	}
+	cmd := exec.Command(`cmd`, `/c`, run, uri)
+	return cmd.Start()
 }

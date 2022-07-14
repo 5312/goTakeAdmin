@@ -25,3 +25,5 @@ package-lock.json
 *.sln
 *.sw?
 project.exe
+# ignore iris project file
+.iris.yml

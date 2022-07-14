@@ -8,6 +8,6 @@ DB:
   Password: "sa.com"
   Charset: "utf8mb4"
 Conf: 
-  AppName: "takeGoAdmin"
+  AppName: "goTakeAdmin"
   Host: "127.0.0.1"
   Port: "9000"

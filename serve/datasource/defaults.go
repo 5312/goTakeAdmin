@@ -22,7 +22,7 @@ func InitDatasource() (err error) {
 	charset := viper.Get("DB.Charset")
 
 	dsn := fmt.Sprintf("%s%s%s%s%s%s%s%s%s%s%s%s%s", user, ":", password, "@tcp(", host, ":", port, ")", "/", driverName, "?charset=", charset, "&parseTime=True&loc=Local")
-	fmt.Printf("dsn: %v\n", dsn)
+	// fmt.Printf("dsn: %v\n", dsn)
 	// 连接云服务器 mysql
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 

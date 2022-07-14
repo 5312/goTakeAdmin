@@ -10,14 +10,17 @@ import (
 
 func RegisterRoute(app *iris.Application) {
 	// 注册中间件
-	app.Get("/",controller.Indexs)  
+	app.Get("/", controller.Indexs)
+
+	v1 := app.Party("/v1")
+
 	// 简单分组: v1.
-	api := app.Party("/api")
+	api := v1.Party("/api")
 	{
 		api.Get("/", controller.Users)
 	}
 
-	admin := app.Party("/admin")
+	admin := v1.Party("/admin")
 	{
 		admin.Get("/", controller.Users)
 	}

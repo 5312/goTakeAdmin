@@ -1,6 +1,10 @@
 # GO项目
 
 ### 热启动项目
+
+`iris 初始化 iris-cli init`
+
+运行
 ```sh
- rizla main.go
+iris-cli run 
 ```
