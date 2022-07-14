@@ -1,0 +1,13 @@
+DB:
+  AutoCreateTable: true
+  Driver: "mysql"
+  DriverName: "cool"
+  Host: "localhost"
+  Port: "3306"
+  User: "root"
+  Password: "sa.com"
+  Charset: "utf8mb4"
+Conf: 
+  AppName: "takeGoAdmin"
+  Host: "127.0.0.1"
+  Port: "9000"

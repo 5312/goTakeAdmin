@@ -1,0 +1,1 @@
+/**/_jsload2&&_jsload2('draw', 'function Oh(){}var Ph=Oh.prototype;Ph.sF=ca();Ph.Ho=function(){aa("addLine\\u63a5\\u53e3\\u6ca1\\u6709\\u5b9e\\u73b0")};Ph.setAttribute=function(){aa("setAttribute\\u63a5\\u53e3\\u6ca1\\u6709\\u5b9e\\u73b0")};Ph.zd=function(){aa("setPath\\u63a5\\u53e3\\u6ca1\\u6709\\u5b9e\\u73b0")};Ph.up=u("Nb");A.dz=Oh; ');
